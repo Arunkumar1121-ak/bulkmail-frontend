@@ -34,7 +34,7 @@ const Hero = () => {
     function send() {
         setstatus(true)
 
-        axios.post("http://localhost:5000/sendmail", { msg: msg , emailList: emailList })
+        axios.post(`${import.meta.env.VITE_API_URL}/sendmail`, { msg: msg , emailList: emailList })
             .then(function (data) {
                 if (data.data === true) {
                     console.log(data.data)
