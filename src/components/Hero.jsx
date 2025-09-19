@@ -34,7 +34,7 @@ const Hero = () => {
     function send() {
         setstatus(true)
 
-        axios.post("https://bulkmail-backend.onrender.com/sendmail/sendmail", { msg: msg , emailList: emailList })
+        axios.post("https://bulkmail-backend.onrender.com/sendmail", { msg: msg , emailList: emailList })
             .then(function (data) {
                 if (data.data === true) {
                     console.log(data.data)
